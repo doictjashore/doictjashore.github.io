@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>EDC COMPLAIN LIST (MADE BY ANE,Jahsore) </title>
+	  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css"/> -->
+	  <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
+	  <meta http-equiv="refresh" content="300">
+  
+
+	</head>
+	<body style="padding: 20px 40px;">
+	  <h1> ই ডি সি সংযোগের অভিযোগ তালিকা</h1>
+		<table id="example" class="display" style="width:100%">
+			<thead>
+				<tr>
+					<th> সময় </th>
+					<th>উপজেলার নাম </th>
+					<th>পৌরসভা/ইউনিয়ন</th>
+					<th>প্রতিষ্ঠানের নাম ও ঠিকানা</th>
+					<th>প্রতিষ্ঠানের মোবাইল নাম্বার</th>
+					<th>কানেকশন নাম্বার</th>
+					<th>অভিযোগের ধরণ</th>
+					<th>অভিযোগের বিবরন</th>
+					<!-- Add more columns as needed based on your JSON structure-->
+				</tr>
+			</thead>
+		</table>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+		<!-- <script type="text/javascript" src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script> -->
+		 <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+		 
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/3.2.4/js/dataTables.buttons.min.js"></script>
+	<script>
+		
+		new DataTable('#example', {
+			ajax: 'https://script.google.com/macros/s/AKfycbxwqx2MH17vAM099JON8KgTavBi_X051U9bG9caYpLBv2DMj8xBKO1pkke7v203_dGrtg/exec',
+			columns: [
+				{ data: 'Timestamp' },
+				{ data: 'উপজেলার নাম ' },
+				{ data: 'পৌরসভা / ইউনিয়ন এর নাম' },
+				{ data: 'প্রতিষ্ঠানের নাম ও ঠিকানা ' },
+				{ data: 'প্রতিষ্ঠানের মোবাইল নাম্বার ( যে নাম্বারে যোগাযোগ করে সমস্যা সম্পর্কে বিস্তারিত জানা যাবে) ' },
+				{ data: 'কানেকশন নাম্বার ( রাউটারের এর গায়ে যেই নাম্বার টা কলম দিয়ে লেখা আছে)  ' },
+				{ data: 'অভিযোগের ধরণ ' },
+				{ data: 'অভিযোগের বিবরন ' },
+				
+			]
+		});
+	</script>
+</body>
+</html>
